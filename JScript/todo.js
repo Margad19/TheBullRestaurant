@@ -15,7 +15,6 @@ export default class Todo {
   }
 }
 
-
 export async function todoLoader(){
 
   const result = await fetch("https://dummyjson.com/todos");
