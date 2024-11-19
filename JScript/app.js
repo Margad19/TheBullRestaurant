@@ -1,1 +1,3 @@
-import {  } from "./todo.js";
+import Todo, { todoLoader as MyLoader } from "./todo.js";
+
+MyLoader();
