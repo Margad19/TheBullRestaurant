@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #0056ff;
+  }
+  
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .navbar nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .navbar .header-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Banner */
+  .banner {
+    text-align: center;
+    padding: 30px 20px;
+    background-image: url('your-banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .banner p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Form Container */
+  .form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #111;
+    color: white;
+  }
+  
+  .file-input label {
+    font-size: 14px;
+  }
+  
+  .file-input p {
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .captcha-box {
+    padding: 20px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
