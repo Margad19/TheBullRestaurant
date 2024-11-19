@@ -3,49 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Layout</title>
+  <title>Form Design</title>
   <link rel="stylesheet" href="/CSS/JoinUs.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">THE BULL</div>
-    <nav>
-      <a href="#">Бидний тухай</a>
-      <a href="#">Мэню</a>
-      <a href="#">Салбар</a>
-      <button class="header-button">Нэвтрэх</button>
-    </nav>
-  </header>
-  <div class="banner">
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-    </p>
+  <div class="header">
+    <img src="/pictures/TheBullLogo.png" alt="Logo">
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Menu</a>
+      <a href="#">Contact</a>
+    </div>
   </div>
-  <main class="form-container">
-    <form>
-      <div class="form-group">
-        <input type="text" placeholder="Овог">
-        <input type="text" placeholder="Нэр">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="Хаяг">
-        <input type="text" placeholder="Регистр">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="Мэйл">
-        <input type="text" placeholder="Утас">
-      </div>
-      <div class="form-group file-input">
-        <label for="file-upload">File type: PDF, Word, JPEG, and PNG</label>
-        <input type="file" id="file-upload" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png">
-        <p>Max. file size: 50 MB</p>
-      </div>
-      <div class="form-group captcha">
-        <div class="captcha-box">[reCAPTCHA]</div>
-      </div>
-      <button type="submit">Button</button>
-    </form>
-  </main>
+
+  <div class="hero-section">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s.</p>
+  </div>
+
+  <div class="form-container">
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" placeholder="Enter your first name">
+    </div>
+    <div class="form-group">
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" placeholder="Enter your last name">
+    </div>
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="text" id="id" placeholder="Enter your ID">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" placeholder="Enter your phone">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Enter your address">
+    </div>
+    <div class="form-group">
+      <label for="file-upload">File Upload</label>
+      <input type="file" id="file-upload">
+      <p class="file-note">File type: PDF, Word, JPEG, and PNG. Max size: 50 MB.</p>
+    </div>
+    <div class="captcha">
+      <input type="checkbox" id="captcha">
+      <label for="captcha">I'm not a robot</label>
+    </div>
+    <div class="button-container">
+      <button>Submit</button>
+    </div>
+  </div>
 </body>
 </html>
