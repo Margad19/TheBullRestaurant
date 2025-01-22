@@ -1,10 +1,26 @@
-import Todo, { todoLoader as MyLoader } from "./todo.js";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const todosArray = await MyLoader();
+function App() {
+    const [data, setData] = useState([]);
 
-todosArray
-    .map(t=>(new Todo(t)).render())
-    .join("");
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/data')
+            .then(response => setData(response.data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
 
-const ts = document.getElementById("todoSection");
-ts.insertAdjacentHTML("beforeend", todoHTML);
+    return (
+        <div>
+            <h1>Data from PostgreSQL</h1>
+            <ul>
+                {data.map((item, index) => (
+                    <li key={index}>{JSON.stringify(item)}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+export default App;
+
