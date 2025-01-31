@@ -1,4 +1,4 @@
-export default class DaUser {
+export default class DaStaff {
     constructor(poolObj) {
         this.pool = poolObj;
         this.selectStr = "SELECT * FROM public.staffs";

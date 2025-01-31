@@ -1,6 +1,13 @@
 import pg from 'pg'
 import DaUser from './dauser.mjs';
-import DaStaffs from './dastaffs.mjs';
+import DaStaff from './dastaff.mjs';
+import Dasetfood from './dasetfood.mjs';
+import DaRoom from './daroom.mjs';
+import DaRoomOrder from './daroomorder.mjs';
+import DaFoodOrder from './dafoodorder.mjs';
+import DaDelivery from './dadelivery.mjs';
+import DaBranch from './dabranch.mjs';
+import DaAdditional from './daadditional.mjs';
 
 const pool = new pg.Pool({
     user: 'postgres',
@@ -12,5 +19,12 @@ const pool = new pg.Pool({
 
 export default pool;
 const daUser = new DaUser(pool);
-const daStaffs = new DaStaffs(pool);
-export { daUser, daStaffs}
+const daStaffs = new DaStaff(pool);
+const daSetfood = new Dasetfood(pool);
+const daRoom = new DaRoom(pool);
+const daRoomOrder = new DaRoomOrder(pool);
+const daFoodOrder = new DaFoodOrder(pool);
+const daDelivery = new DaDelivery(pool);
+const daBranch = new DaBranch(pool);
+const daAdditional = new DaAdditional(pool);
+export { daUser, daStaffs, daSetfood, daRoom, daRoomOrder, daFoodOrder, daDelivery, daBranch, daAdditional}
