@@ -9,6 +9,9 @@ export default class DaUser {
         try {
             const res = await client.query(this.selectStr);
             return res.rows;
+        } catch (error) {
+            console.error("Database Error:", error); // Logs detailed error
+            throw new Error("Database query failed");
         } finally {
             client.release();
         }

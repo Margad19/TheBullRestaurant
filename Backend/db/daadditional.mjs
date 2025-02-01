@@ -22,8 +22,8 @@ export default class DaAdditional {
                     this.insertAdditionalStr,
                     [additionalObj.setfoodid, additionalObj.type, additionalObj.name]
                 );
-            const userId = result.rows[0].id;
-            console.log('Inserted user ID:', userId);
+            //const userId = result.rows[0].id;
+            //console.log('Inserted user ID:', userId);
             if (result.rowCount != 1) {
                 res.status(500).send(`Couldn't add new additional product.`);
                 return;

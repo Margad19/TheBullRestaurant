@@ -1,39 +1,41 @@
-import {daUser} from "../db/dauser.mjs";
+import { daUser } from "../db/da.mjs";
 
 export default class User {
-    constructor(parameters) {
-    }
+    constructor() {}
 
-    async register() {
-        try {
-            const result = await daUser.insert(this);
-            return result;
-        } catch (error) {
-            throw error;
-        }
-    }
-    /** GET Methods */
     /**
-     * @openapi
-     * '/api/cities':
-     *  get:
-     *     tags:
-     *     - City Controller
-     *     summary: Get a list of cities
+     * @swagger
+     * /api/user:
+     *   get:
+     *     summary: Get all users
+     *     description: Fetches all users from the database
      *     responses:
-     *      200:
-     *        description: Fetched Successfully
-     *      400:
-     *        description: Bad Request
-     *      404:
-     *        description: Not Found
-     *      500:
-     *        description: Server Error
+     *       200:
+     *         description: List of users
+     *         content:
+     *           application/json:
+     *             schema:
+     *               type: array
+     *               items:
+     *                 type: object
+     *                 properties:
+     *                   id:
+     *                     type: integer
+     *                     example: 1
+     *                   name:
+     *                     type: string
+     *                     example: John Doe
      */
     async get(req, res) {
         console.log("user is getting...");
-        
-        await daUser.select(req, res);
+        try {
+            const users = await daUser.select();
+            res.json(users);
+        } catch (error) {
+            res.status(500).json({ error: "Error fetching users" });
+        }
     }
-
 }
+
+const user = new User();
+export { user };
