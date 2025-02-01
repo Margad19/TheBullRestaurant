@@ -19,7 +19,7 @@ const pool = new pg.Pool({
 
 export default pool;
 const daUser = new DaUser(pool);
-const daStaffs = new DaStaff(pool);
+const daStaff = new DaStaff(pool);
 const daSetfood = new Dasetfood(pool);
 const daRoom = new DaRoom(pool);
 const daRoomOrder = new DaRoomOrder(pool);
@@ -27,4 +27,4 @@ const daFoodOrder = new DaFoodOrder(pool);
 const daDelivery = new DaDelivery(pool);
 const daBranch = new DaBranch(pool);
 const daAdditional = new DaAdditional(pool);
-export { daUser, daStaffs, daSetfood, daRoom, daRoomOrder, daFoodOrder, daDelivery, daBranch, daAdditional}
+export { daUser, daStaff, daSetfood, daRoom, daRoomOrder, daFoodOrder, daDelivery, daBranch, daAdditional}
