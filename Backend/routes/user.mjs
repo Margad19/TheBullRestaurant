@@ -1,11 +1,7 @@
 import {daUser} from "../db/dauser.mjs";
 
 export default class User {
-    constructor(username, password, email, phone) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.phone = phone;
+    constructor(parameters) {
     }
 
     async register() {
@@ -16,9 +12,26 @@ export default class User {
             throw error;
         }
     }
-
+    /** GET Methods */
+    /**
+     * @openapi
+     * '/api/cities':
+     *  get:
+     *     tags:
+     *     - City Controller
+     *     summary: Get a list of cities
+     *     responses:
+     *      200:
+     *        description: Fetched Successfully
+     *      400:
+     *        description: Bad Request
+     *      404:
+     *        description: Not Found
+     *      500:
+     *        description: Server Error
+     */
     async get(req, res) {
-        console.log("city getting...");
+        console.log("user is getting...");
         
         await daUser.select(req, res);
     }
