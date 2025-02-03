@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    background-color: black;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+}
+
+header img {
+    width: 90px;
+    height: 90px;
+    margin-left: 100px;
+}
+
+header a {
+    color: aliceblue;
+    font-size: medium;
+    font-weight: bold;
+}
+
+header #headerTexts {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+header #newtreh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(232, 28, 37);
+
+}
