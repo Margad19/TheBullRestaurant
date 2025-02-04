@@ -41,5 +41,25 @@ header #newtreh {
     height: 30px;
     border-radius: 5px;
     background-color: rgb(232, 28, 37);
+}
 
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    background-color: aqua;
+}
+
+#main #mainEhlel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 700px;
+}
+
+#main #mainEhlel a {
+    color: aliceblue;
+    font-size: xx-large;
+    font-weight: bold;
 }
