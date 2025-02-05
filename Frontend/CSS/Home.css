@@ -17,6 +17,7 @@ body {
     margin: 0px;
     font-family: 'Nunito', sans-serif;
     background-color: black;
+    background: radial-gradient(circle 900px at 110% 1300px, rgb(232, 28, 37), black);
 }
 
 header {
@@ -65,8 +66,6 @@ header #headerTexts #newtreh {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
-    background-color: aqua;
 }
 
 #main #mainEhlel {
@@ -81,24 +80,38 @@ header #headerTexts #newtreh {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 100px;
 }
 
-#main #mainEhlel #texts a {
+#main #mainEhlel #texts > a {
     color: aliceblue;
     font-size: 70px;
     font-weight: bold;
     text-align: center;
-    margin-left: 100px;
 }
 
-#main #mainEhlel #texts .towch {
+#main #mainEhlel #texts #towchnuud {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+#main #mainEhlel #texts #towchnuud .towch {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
+    width: 160px;
     height: 30px;
     border-radius: 5px;
     background-color: rgb(232, 28, 37);
+}
+
+#main #mainEhlel #texts #towchnuud .towch a {
+    font-size: medium;
+    font-weight: bold;
+    color: aliceblue;
 }
 
 #main #mainEhlel img {
@@ -106,4 +119,38 @@ header #headerTexts #newtreh {
     height: 700px;
     transform: rotate(-17deg) translateX(100px);
     transition: transform 0.3s ease-in-out;
+}
+
+#main #aboutUs {
+    height: 900px;
+
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+}
+
+#main #aboutUs #aboutUsPane {
+    width: 1400px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid rgb(139, 114, 114);
+    border-left: none;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    background-color: rgb(225, 225, 225, 0.1);
+}
+
+#main #aboutUs #aboutUsPane img {
+    margin-left: 50px;
+    width: 500px;
+    height: 300px;
+    border: 2px solid rgb(139, 114, 114);
+    border-radius: 18px;
+}
+
+#main #aboutUs #aboutUsPane #texts {
+    color: aliceblue;
+    margin-left: 100px;
 }
