@@ -1,16 +1,34 @@
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* For Edge and IE */
+  body {
+    -ms-overflow-style: none;
+  }
+
 body {
     margin: 0px;
     font-family: 'Nunito', sans-serif;
     background-color: black;
 }
 
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     width: 100%;
     height: 90px;
+    background-color: black;
 }
 
 header img {
@@ -33,7 +51,7 @@ header #headerTexts {
     margin-right: 100px;
 }
 
-header #newtreh {
+header #headerTexts #newtreh {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,11 +73,37 @@ header #newtreh {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     height: 700px;
 }
 
-#main #mainEhlel a {
+#main #mainEhlel #texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main #mainEhlel #texts a {
     color: aliceblue;
-    font-size: xx-large;
+    font-size: 70px;
     font-weight: bold;
+    text-align: center;
+    margin-left: 100px;
+}
+
+#main #mainEhlel #texts .towch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(232, 28, 37);
+}
+
+#main #mainEhlel img {
+    width: 700px;
+    height: 700px;
+    transform: rotate(-17deg) translateX(100px);
+    transition: transform 0.3s ease-in-out;
 }
