@@ -21,5 +21,7 @@
   "directories": {
     "test": "test"
   },
-  "keywords": []
+  "keywords": [],
+  "proxy": "http://localhost:3000"
 }
+

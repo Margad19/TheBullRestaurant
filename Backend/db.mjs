@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";  // Import cors
 import { user } from "./routes/user.mjs";
 import { staff } from "./routes/staff.mjs";
 import { setfood } from "./routes/setfood.mjs";
@@ -13,7 +14,10 @@ import swaggerDocs from "./swagger.mjs";
 const app = express();
 app.use(express.json());
 
-const port = 3000;
+// Enable CORS for all routes
+app.use(cors());  // This will allow requests from any origin
+
+const port = 5500;
 
 app.get("/", (req, res) => res.send("Hello World!"));
 app.get("/api/user", (req, res) => user.get(req, res));
@@ -31,4 +35,5 @@ app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}`);
     console.log(`Documentation is on http://localhost:${port}/docs`);
 });
+
 

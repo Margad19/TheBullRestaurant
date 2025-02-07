@@ -52,16 +52,6 @@ header #headerTexts {
     margin-right: 100px;
 }
 
-header #headerTexts #newtreh {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: rgb(232, 28, 37);
-}
-
 #main {
     display: flex;
     flex-direction: column;
@@ -98,19 +88,22 @@ header #headerTexts #newtreh {
     justify-content: space-between;
 }
 
-#main #mainEhlel #texts #towchnuud .towch {
-    display: flex;
+.towch {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 30px;
+    max-width: fit-content;
     border-radius: 5px;
     background-color: rgb(232, 28, 37);
 }
 
-#main #mainEhlel #texts #towchnuud .towch a {
+.towch a {
     font-size: medium;
     font-weight: bold;
+    
     color: aliceblue;
 }
 
@@ -118,12 +111,20 @@ header #headerTexts #newtreh {
     width: 700px;
     height: 700px;
     transform: rotate(-17deg) translateX(100px);
-    transition: transform 0.3s ease-in-out;
+    animation: resetImage 0.7s ease-in-out forwards;
+}
+
+@keyframes resetImage {
+    from {
+        transform: rotate(-60deg) translateX(400px) translateY(300px);
+    }
+    to {
+        transform: rotate(-17deg) translateX(100px);/* Normal state */
+    }
 }
 
 #main #aboutUs {
-    height: 900px;
-
+    height: 400px;
     display: flex;
     width: 100%;
     margin-top: 80px;
@@ -151,6 +152,77 @@ header #headerTexts #newtreh {
 }
 
 #main #aboutUs #aboutUsPane #texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
     color: aliceblue;
     margin-left: 100px;
+}
+
+#main #aboutUs #aboutUsPane #texts h1{
+    font-size: 58px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#main #aboutUs #aboutUsPane #texts #description a{
+    opacity: 60%;
+}
+
+#main #menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+#main #menu #menuPane {
+    display: flex;
+    flex-direction: column;
+
+}
+#main #menu #menuPane h1{
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 100px repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.header {
+    grid-column: 2 / span 4;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: aliceblue;
+}
+
+.category {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+    color: aliceblue;
+}
+
+.item {
+    width: 150px;
+    height: 80px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+#main #hayg h1 {
+    color: aliceblue;
+    text-align: left;
+    padding: 20px;
+    margin-left: 100px;
+    margin-top: 100px;
 }
